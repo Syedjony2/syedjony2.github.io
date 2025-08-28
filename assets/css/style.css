@@ -1,0 +1,161 @@
+/* SRSOFTWARES minimal, clean theme */
+:root{--bg:#0b0f14;--panel:#121823;--card:#0f141c;--text:#e7ecf3;--muted:#9fb0c3;--primary:#27c1a7;--primary-2:#1aa28e;--border:#223042}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--text)}
+.container{width:min(1100px,92%);margin:0 auto}
+.site-header{position:sticky;top:0;z-index:10;background:rgba(12,17,24,.8);backdrop-filter:blur(8px);border-bottom:1px solid var(--border)}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+.brand{font-weight:800;letter-spacing:.5px;color:var(--text);text-decoration:none}
+.nav a{color:var(--muted);text-decoration:none;margin-left:18px}
+.nav a.active,.nav a:hover{color:var(--text)}
+.hero{padding:68px 0;background:linear-gradient(180deg,rgba(39,193,167,.06),transparent)}
+.hero h1{font-size:34px;line-height:1.2;margin:0 0 8px}
+.hero .sub{color:var(--muted);max-width:780px}
+.section-title{font-size:22px;margin:0 0 16px}
+.grid{display:grid;gap:16px}
+.cards{grid-template-columns:repeat(auto-fill,minmax(240px,1fr))}
+.card{display:block;background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px;text-decoration:none;color:var(--text);transition:transform .12s ease, border-color .12s}
+.card:hover{transform:translateY(-2px);border-color:#2e4158}
+.link{display:inline-block;margin-top:6px;color:var(--primary)}
+.btn{display:inline-block;padding:10px 14px;border-radius:10px;border:1px solid var(--border);color:var(--text);text-decoration:none;background:var(--panel)}
+.btn.primary{background:var(--primary);border-color:transparent;color:#04110f;font-weight:700}
+.btn.primary:hover{background:var(--primary-2)}
+.btn:hover{border-color:#2e4158}
+.pad-y{padding:32px 0}
+.products article{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:18px}
+.product-hero{padding:32px 0;background:linear-gradient(180deg,rgba(39,193,167,.06),transparent)}
+.product-hero h1{margin:0 0 10px}
+.meta{color:var(--muted);font-size:14px}
+.kv{display:grid;gap:16px;grid-template-columns:1.5fr .9fr}
+.kv .panel{background:var(--panel);border:1px solid var(--border);border-radius:14px;padding:16px}
+.kv ul{margin:0 0 0 18px}
+.kv li{margin:6px 0}
+@media (max-width: 900px){.kv{grid-template-columns:1fr}}
+.site-footer{border-top:1px solid var(--border);margin-top:32px}
+.footer-inner{display:flex;justify-content:space-between;align-items:center;padding:16px 0;color:var(--muted)}
+.contact{padding:32px 0}
+.center{text-align:center}
+
+/* --- Enhanced Theme Overrides (non-breaking) --- */
+/* Background gradient and improved typography rhythm */
+body{
+  background: radial-gradient(1200px 600px at 20% -10%, rgba(39,193,167,.10), transparent),
+              radial-gradient(1000px 500px at 100% 0%, rgba(87,129,255,.08), transparent),
+              var(--bg);
+  line-height: 1.55;
+}
+
+/* Header polish */
+.site-header{box-shadow:0 1px 0 rgba(255,255,255,0.04)}
+.brand{font-size:18px}
+.nav a{padding:6px 8px;border-radius:8px}
+.nav a.active,.nav a:hover{background:rgba(255,255,255,0.04)}
+
+/* Hero spacing and emphasis */
+.hero{padding:92px 0}
+.hero h1{font-size:42px}
+.hero .sub{font-size:18px;margin-top:8px}
+.cta-row{margin-top:18px}
+.cta-row .btn{margin-right:10px}
+
+/* Buttons - larger and smoother */
+.btn{padding:12px 16px;border-radius:12px;transition:transform .12s ease, border-color .12s, background .12s}
+.btn:hover{transform:translateY(-1px)}
+.btn.primary{box-shadow:0 8px 18px rgba(39,193,167,.18)}
+
+/* Cards - bigger, with subtle glow */
+.cards .card{padding:18px;border-radius:14px;box-shadow:0 6px 18px rgba(0,0,0,0.18)}
+.cards .card h3{margin:0 0 6px}
+.cards .card p{color:var(--muted)}
+
+/* Product page layout refinements */
+.product-hero{padding:48px 0}
+.kv{gap:20px}
+.kv .panel{box-shadow:0 8px 24px rgba(0,0,0,0.22)}
+.kv h3{margin:12px 0 8px}
+.kv .panel p{color:var(--muted)}
+
+/* Image grids for screenshots */
+.grid img{display:block;max-width:100%}
+.grid img+img{margin-top:10px}
+/* Force larger screenshots: single column on all sizes */
+.grid.screenshots{grid-template-columns:1fr !important}
+
+/* Footer polish */
+.site-footer{background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent 40%), var(--bg)}
+.footer-inner{font-size:14px}
+
+/* --- Light Theme Overrides (applied after dark defaults) --- */
+:root{
+  --bg:#f7f9fc;
+  --panel:#ffffff;
+  --card:#ffffff;
+  --text:#0b0f14;
+  --muted:#5b6b7f;
+  --primary:#2563eb; /* blue that matches your logo */
+  --primary-2:#1e4fd6;
+  --border:#e6ecf2;
+}
+
+body{
+  color:var(--text);
+  background:
+    radial-gradient(1200px 600px at 20% -10%, rgba(37,99,235,.08), transparent),
+    radial-gradient(1000px 500px at 100% 0%, rgba(39,193,167,.05), transparent),
+    var(--bg);
+}
+.site-header{background:rgba(255,255,255,.9);border-bottom:1px solid var(--border);box-shadow:0 2px 20px rgba(15,23,42,.04)}
+.nav a.active,.nav a:hover{background:rgba(15,23,42,.06)}
+.hero{background:linear-gradient(180deg, rgba(37,99,235,.06), transparent)}
+.product-hero{background:linear-gradient(180deg, rgba(37,99,235,.06), transparent)}
+.card{background:var(--card);border:1px solid var(--border);color:var(--text)}
+.btn{background:var(--panel);color:var(--text);border-color:var(--border)}
+.btn.primary{color:#fff}
+
+/* Brand logo in header */
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.3px}
+.brand-logo{height:28px;width:auto;display:block}
+
+/* Modern product cards */
+.cards .card{
+  position:relative;
+  padding:20px 18px 18px;
+  border-radius:14px;
+  box-shadow:0 8px 24px rgba(2,6,23,0.05);
+  transition:transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+}
+.cards .card:hover{
+  transform:translateY(-3px);
+  box-shadow:0 14px 32px rgba(2,6,23,0.09);
+  border-color:#cfd9e3;
+}
+.cards .card h3{margin-top:2px;margin-bottom:6px}
+.cards .card .link{color:var(--primary);font-weight:600}
+
+/* 3D product cards with media thumbnail */
+.cards{perspective:1200px}
+.card-3d{transform-style:preserve-3d;will-change:transform}
+.card-3d:hover{transform:translateY(-6px) rotateX(6deg) rotateY(-6deg) scale(1.01);box-shadow:0 18px 38px rgba(2,6,23,0.12)}
+.card-media{position:relative;border-radius:12px;overflow:hidden;border:1px solid var(--border);background:#f2f6fb}
+.card-media img{display:block;width:100%;height:160px;object-fit:cover;transition:transform .25s ease}
+.card-media.bg{height:160px;background-size:cover;background-position:center;background-repeat:no-repeat;transition:transform .25s ease}
+.card-3d:hover .card-media img{transform:scale(1.04)}
+.card-3d:hover .card-media.bg{transform:scale(1.03)}
+.card-badge{position:absolute;top:10px;left:10px;background:rgba(255,255,255,.85);border:1px solid var(--border);padding:4px 8px;border-radius:999px;font-size:12px;font-weight:700;color:var(--primary)}
+.card-body{margin-top:12px}
+
+/* Product accent color system */
+.card{--accent: var(--primary)}
+.card[class*="card--"] .link{color:var(--accent)}
+.card[class*="card--"] .card-badge{background:var(--accent);color:#fff;border-color:transparent}
+.card[class*="card--"] .card-media{border-color:var(--accent)}
+.card-media.bg::after{content:"";position:absolute;inset:0;background:linear-gradient(to bottom, rgba(2,6,23,0) 45%, rgba(2,6,23,0.28));pointer-events:none}
+
+/* Accent presets */
+.card--xrf{--accent:#2563eb}
+.card--assay{--accent:#16a34a}
+.card--mark{--accent:#ea580c}
+.card--jewellery{--accent:#a855f7}
+.card--diamond{--accent:#0891b2}
+.card--fire{--accent:#dc2626}
